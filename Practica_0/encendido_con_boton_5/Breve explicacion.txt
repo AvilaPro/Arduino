@@ -1,0 +1,1 @@
+En este programa esta escrito el encendido de boton tal como en todos los anteriores solo que aqui la opcion antirebote se creo previamente en una funcion declarada antes de de la funcion global "void loop()".
