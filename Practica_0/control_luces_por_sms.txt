@@ -1,0 +1,131 @@
+tengo un proyecto donde estoy controlando la energía eléctrica de la instalación de casa(iluminación) y seguridad(sensores de movimiento), el cual genere el código en una arduino mega 2560 y mando a ejecutar las sentencias por medio de mensaje que llega a través del shield sim900, todo hasta aquí estaba bien, el detalle es que necesito abrir el monitor serial para que se puedan cargar los comandos AT en el shield sim900 y me gustaría saber si se puede ejecutar los comandos AT sin tener que abrir el monitor serial, dejo el código:
+
+#include <SoftwareSerial.h>
+
+SoftwareSerial SIM900(10, 11); // Configura el puerto serie para el SIM900
+
+char incoming_char = 0; //Variable que guarda los caracteres que envia el SIM900
+String mensaje = "";
+int pin3 = 3;
+int valor;
+char alarma;
+
+void setup()
+{
+pinMode(13,OUTPUT);
+pinMode(12,OUTPUT);
+pinMode(3,INPUT);
+inicializaSIM900();
+}
+
+void loop()
+{
+  if (SIM900.available() > 0)
+  {
+    incoming_char = SIM900.read(); //Guardamos el carácter del GPRS
+    // Serial.print(incoming_char); //Mostramos el carácter en el monitor serie
+    mensaje = mensaje + incoming_char ; // Añadimos el carácter leído al mensaje
+  }
+identifica_SMS();
+}
+
+
+void inicializaSIM900()
+{
+  delay (5000);
+  SIM900.begin(19200); //Configura velocidad del puerto serie para el SIM900
+  Serial.begin(19200); //Configura velocidad del puerto serie del Arduino
+  Serial.println("OK");
+  delay (1000);
+  SIM900.println("AT + CPIN = \"1234\""); //Comando AT para introducir el PIN de la tarjeta
+  delay(25000); //Tiempo para que encuentre una RED
+  Serial.println("PIN OK");
+  SIM900.print("AT+CLIP=1\r"); // Activa la identificación de llamada
+  delay(100);
+  SIM900.print("AT+CMGF=1\r"); //Configura el modo texto para enviar o recibir mensajes
+  delay(1000);
+  SIM900.print("AT+CNMI=2,2,0,0,0\r"); // Saca el contenido del SMS por el puerto serie del GPRS
+  delay(1000);
+}
+
+void identifica_SMS()
+{
+  int foco_uno_on = mensaje.indexOf("a");
+  int foco_uno_off = mensaje.indexOf("b");
+  int foco_dos_on = mensaje.indexOf("c");
+  int foco_dos_off = mensaje.indexOf("d");
+  int sensor_on = mensaje.indexOf("e");
+  int sensor_off = mensaje.indexOf("f");
+  int sensor2_on = mensaje.indexOf("g");
+  int sensor2_off = mensaje.indexOf("h");
+ 
+  char dato= Serial.read();
+    if (foco_uno_on >=0)
+    {
+    digitalWrite(13,HIGH);
+    mensaje = "";
+    }
+     if (foco_uno_off >=0)
+    {
+    digitalWrite(13,LOW);
+    mensaje = "";
+    }
+     if (foco_dos_on >=0)
+    {
+    digitalWrite(12,HIGH);
+    mensaje = "";
+    }
+     if (foco_dos_off >=0)
+    {
+    digitalWrite(12,LOW);
+    mensaje = "";
+    }
+    if (sensor_on >=0)
+    {
+    alarma = 'e';
+    mensaje = "";
+    }
+     if (sensor_off >=0)
+    {
+   alarma = 'f';
+    mensaje = "";
+    }
+    if (sensor2_on >=0)
+    {
+      SIM900.println("ATD7821527566;");  //Comando AT para realizar una llamada
+      delay(50000);  // Espera 30 segundos mientras realiza la llamada
+      SIM900.println("ATH");  // Cuelga la llamada
+      delay(1000);
+      mensaje = "";
+    }
+     if (sensor2_off >=0)
+    {
+       mensaje = "";
+    } 
+    if (alarma == 'e')
+    {
+    valor = digitalRead(pin3);
+    if (valor == LOW)
+      {
+       
+      }
+    if ((valor == HIGH) && (alarma == 'e'))
+    {
+       for (int i=0; i<=10; i++)
+        {
+       
+        digitalWrite(12, LOW);
+        digitalWrite(13, HIGH);
+        delay(500);
+        digitalWrite(13, LOW);
+        digitalWrite(12, HIGH);
+        delay(500);
+        }
+        digitalWrite(13, LOW);
+        digitalWrite(12, LOW);
+     }
+    }
+
+     
+     
+}
