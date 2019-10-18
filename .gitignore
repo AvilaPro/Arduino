@@ -2,3 +2,6 @@ LIBRERIAS/Keypad
 LIBRERIAS/LiquidCrystal_I2C
 ARDUINO_RECONOCER_PUERTO
 clases/desafio_1/
+clases/desafio_2/
+clases/desafio_3/
+
