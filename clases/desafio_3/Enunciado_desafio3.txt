@@ -1,0 +1,11 @@
+Reforzar el manejo de entradas y salidas analogicas y digitales del arduino nano.
+
+1.- Sabiendo que las entradas analógicas del arduino convierten señales de entre 0 y 5V en valores entre 0 y 1023 respectivamente, haga un programa que lea el valor analógico del pin A0 y muestre en el puerto serial el voltaje en formato flotante con dos decimales que esta entrando por el pin.
+
+2.- Simule el ejemplo anterior en tinker cad usando un potenciometro conectado al 5v, GND y al pin A0. Tome capturas de pantalla de la simulación y del código cargado en el simulador
+
+3.- Haga un programa que envíe una pregunta (al estilo de quien quiere ser millonario) al usuario por puerto serial e emprima en 4 lineas distintas las 4 opciones enumeradas de las posibles respuestas (solo una debe ser verdadera), el usuario deberá enviar el numero de la opción que el crea sea verdadera y el arduino le responderá si acertó o no la respuesta.
+
+4.- Simule el ejemplo anterior en tinker cad y tome capturas de pantalla
+
+5.- Haga un programa que use dos entradas digitales donde se conecten dos pulsadores, al pulsar uno de estos pulsadores se debe incrementar paso a paso el brillo de un led conectado a una salida analógica, si se pulsa el otro botón el led deberá bajar su brillo.

@@ -1,3 +1,7 @@
+
+
+
+
 /*
 SMS sender
 
@@ -6,18 +10,24 @@ Originally written by Tom Igoe
 But this is modified version
 */
 
+//Si la targeta GSM tuviera PIN se usaria este programa con el uso del PIN de dicha tarjeta SIM.
+//El proyecto 
+
 // Include the GSM library
 #include <GSM.h>
+//#include <SoftwareSerial.h>
 
-#define PINNUMBER ""
+//#include <SoftwareSerial.h> //incluido luego para ver si no me da error el Serial.
+#define PINNUMBER "0000"
 
 // initialize the library instance
 GSM gsmAccess;
 GSM_SMS sms;
+//SoftwareSerial mySerial(15, 14);
 
 void setup(){
 // initialize serial communications and wait for port to open:
-Serial.begin(9600);
+Serial.begin(38400);
 while (!Serial){
 ; // wait for serial port to connect. Needed for Leonardo only
 }
@@ -52,8 +62,8 @@ void loop(){
 void sendMessage(){
     Serial.print("Message is sending...: ");
     // send the message
-    sms.beginSMS("03XXXXXXX "); // Replace XXXXXXX with your mobile number.
-    sms.print("This is just some message"); // Message content, replace with your's.
+    sms.beginSMS("+584245142978"); // Replace XXXXXXX with your mobile number.
+    sms.print("Envio SMS Exitoso"); // Message content, replace with your's.
     sms.endSMS();
     Serial.println("COMPLETE!\n");
     Serial.println("Message Sent...!\n");
