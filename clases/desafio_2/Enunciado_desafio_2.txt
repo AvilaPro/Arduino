@@ -1,0 +1,13 @@
+Enunciado de la tarea 2 de la sección 3033
+
+Reforzar los conocimientos de arduino en el apartados de delay, salidas digitales y salidas analógica
+
+1.- Hacer el código en arduino para enviar el código SOS a través del parpadeo del led conectado al pin D8. Enviar el código para evaluarlo en archivo TXT. Para conocer mas detalles del codigo SOS ver este link. https://es.wikipedia.org/wiki/SOS
+
+2.- Simular el ejemplo del SOS en el tinker CAD y enviar un capture de pantalla del codigo de arduino cargado en tinkercad y un capture de la simulacion.
+
+3.- Hacer un código donde se incrementen cada 50 ms una variable del tipo Byte, y hacer que esa variable controle cada 50ms el brillo de un led conectado a uno de los pines PWM del arduino. Imprimir el valor de esta variable cada 50ms en el monitor serial a una velocidad de 19200 Baudios. Enviar el codigo para su evalucion en archivo TXT
+
+4.- Simular en Tinker cad el ejercicio Anterior y enviar captura de pantalla de la simulación, codigo fuente y monitor serial
+
+5.- Hacer el codigo de un semaforo, se deben usar tres pines del arduino, en D3 se conectara un led verde, en D4 led amarillo y en D5 un led rojo, el programa debe encender el led verde durante 5 segundos luego apagarlo y prender el amarillo por 2 seg y luego apagarlo y encender el rojo por 3 seg, para luego comenzar el ciclo nuevamente. Simular ese ejercicio en tinker cad y enviar el código fuente y capturas de pantalla de la simulacion.

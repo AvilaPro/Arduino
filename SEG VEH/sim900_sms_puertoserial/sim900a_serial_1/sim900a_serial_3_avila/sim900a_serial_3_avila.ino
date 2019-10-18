@@ -1,3 +1,7 @@
+
+
+
+
 /*
 SMS sender
 
@@ -11,16 +15,19 @@ But this is modified version
 
 // Include the GSM library
 #include <GSM.h>
-#include <SoftwareSerial.h> //incluido luego para ver si no me da error el Serial.
+//#include <SoftwareSerial.h>
+
+//#include <SoftwareSerial.h> //incluido luego para ver si no me da error el Serial.
 #define PINNUMBER "0000"
 
 // initialize the library instance
 GSM gsmAccess;
 GSM_SMS sms;
+//SoftwareSerial mySerial(15, 14);
 
 void setup(){
 // initialize serial communications and wait for port to open:
-Serial.begin(9600);
+Serial.begin(38400);
 while (!Serial){
 ; // wait for serial port to connect. Needed for Leonardo only
 }
