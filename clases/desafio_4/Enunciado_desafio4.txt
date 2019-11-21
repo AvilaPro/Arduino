@@ -1,0 +1,12 @@
+Enunciado de la tarea 4 de la sección 3033
+Reforzar los conocimientos adquiridos en el nivel 1 de arduino
+
+1.- Una empresa tiene un calefactor que se le daño su modulo de control de temperatura, lo contactan a usted para que con un arduino pueda resolver el problema. Tienen un sensor de temperatura de -100 a 100 grados centigrados que arroja un voltaje entre 0 y 5v respectivamente (0V a -100 grados C y 5v a 100 grados C). Y tiene una resistencia que genera calor y se enciende con una salida digital de 5v que pude ser conectada a cualquier pin digital del Arduino. Con todo esto se le pide que haga un controlador de temperatura que encienda la resistencia y mida la temperatura cuando la temperatura medida supere los 51grados apague la resistencia y cuando este por debajo de 49 grados la vuelva a encender para mantener la temperatura en promedio en 50 grados centigrados
+
+2.- Simule el ejercicio 1 en Tinker cad para simular el sensor de temperatura use un potenciometro de 10K ohm. use un led para simular la resitencia de calentamiento. Enviar el link del proyecto en tinkercad para poder ser evaluado.
+
+3.- Haga el mismo ejemplo 1 pero ahora pidale al usuario por puerto serial cual sera la temperatura en que debe funcionar y mantener el sistema funcionando. Y haga que cada 1 seg improma en puerto serial la temperatura medida
+
+4.- Simule el ejercicio 3 en Tinker cad para simular el sensor de temperatura use un potenciometro de 10K ohm. use un led para simular la resistencia de calentamiento. Enviar el link del proyecto en tinkercad para poder ser evaluado.
+
+5.- Conecte 8 led en las salidas digitales del arduino y un potenciometro en una entrada digital, haga un vumetro con los led esto es haciendo que cuando el potenciometro sea girado a la derecha vayan encendiendo los led proporcionalmente hasta que enciendan todos justo cuando el potenciometro este a su máximo y apague los leds proporcionalmente cuando el potenciometro este siendo girado a la izquierda hasta que se apaguen todos los led cuando el potenciometro este en su mínimo. Simule esto en tinker cad y comparta el link para ser evaludado
