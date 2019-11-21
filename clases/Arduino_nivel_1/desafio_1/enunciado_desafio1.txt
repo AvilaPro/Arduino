@@ -1,0 +1,12 @@
+Enunciado de la tarea 1 de la sección 3033
+Conocer las herramientas de software mas usadas en el desarrollo de proyectos con Arduino 
+
+1.- Crea una cuenta en arduino web, inicie sesión y abra el ejemplo "BLINK", seleccione la tarjeta arduino NANO, hacer click en el botón compilar y una vez compilado tome un print screen (captura de pantalla).
+
+2.- Descargue el software de arduino desde el siguiente link (https://www.arduino.cc/en/Main/Software) instalelo en su computadora (tomar dos capturas de pantalla del proceso de instalación) una vez instalado abra el ejemplo "BLINK", seleccione la tarjeta arduino nano, hacer click en el botón compilar y una vez compilado tome una captura de pantalla del resultado.
+
+3.- Crear una cuenta en TINKERCAD, iniciar sesión ir al apartado circuits, luego a proyectos y abrir el ejemplo "Blink an LED With Digital Output", haga click en iniciar simulación y tome una captura de pantalla de la simulación corriendo.
+
+4.- Investigue y nombre 5 diferencias entre al arduino leornardo y el arduino nano
+
+5.- Investigue cual es la placa oficial de arduino mas potente que existe en la actualidad, cree un documento sencillo con el nombre y características de la placa, incluyendo el link o los links usados como referencia.
