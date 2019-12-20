@@ -1,0 +1,29 @@
+Pasos para instalacion:
+
+1. Descargar las librerias comprimidas en Librerias_Arduino_Proteus.rar
+
+2. Descomprimir lo descargado.
+
+3. Copiar los archivos ubicados en la carpeta "Arduino TEP".
+
+4. Buscar la carpeta "Labcenter Electronics" que contenga la carpeta "Proteus 8 Professional" y que esta contenga la carpeta "LIBRARY". Alli dentro pegar los archivos anteriormente copiados.
+
+5. Hacer lo mismo con los archivos de la carpeta "Simulino 4.0"
+
+Pasos para usar Arduino IDE con Proteus:
+
+1. Abrir el Arduino IDE.
+
+2. Ir a "Archivo" "Preferencias".
+
+3. Tildar los checkbox de "mostrar slida detallada mientras:" "Compilacion" y "Subir".
+
+4. Una vez se "compile" y se "suba" Observar en la ventana de comunicacion inferior que una vez se ejecuta la accion "Compiling libraries..." Se va a generar un archivo .hex en una direccion predeterminada que muy probablemente se almacenara en una direccion similar a esta: "C:\Users\AppData\Local\Temp\". Alli se encontrara el archivo .hex que necesitamos usar en el Proteus 8.
+
+5. Copiar este archivo .hex y pegarlo en la carpeta local del proyecto que se este realizando.
+
+6. Abrir Proteus 8 y dar doble click sobre el Arduino a utilizar.
+
+7. Dar click sobre el boton de la carpeta abierta en la linea "Program File". Seleccionar el archivo .hex y luego aceptar.
+
+8. Ya esta listo para ser usado y simular con el proteus.
