@@ -1,0 +1,123 @@
+LDP1:
++1 Algoritmos
++2Algoritmos Usando Bloques
+-3Más Bloques
+-4Programación y Pseudocódigo
+-5Variables
+-6 Instrucciones Básicas en Pseudocódigo
++7Expresiones Matemáticas y Operadores Aritméticos
++8Cálculos Comunes 1: Promedios y Porcentajes 1
++9Cálculos Comunes 2: Aumentos y Descuentos
+-10 Asignaciones
++11 Linealización de Expresiones Matemáticas
++12 Resolución de Problemas y Algoritmos
++13 Del Enunciado al Algoritmo Secuencial
++14 Introducción a Funciones
+-15 Interpretación de Flujogramas
+
+LDP2:
+1 Expresiones Lógicas
+2 Estructuras Selectivas 1
+3 Estructuras Repetitivas 1: Definiciones
+4 Estructuras Repetitivas 2: Para
+5 Estructuras Selectivas 2: Selectiva Doble
+6 Estructuras Selectivas 3: Anid. de Selectivas
+7 Estructuras Selectivas 4: Aplic. de Anidamientos
+8 Operaciones Lógicas y Selectivas 1
+9 Operaciones Lógicas y Selectivas 2
+10 Operaciones Lógicas y Selectivas 3
+11 Estructuras Selectivas 5: Alternativa Múltiple
+12 Estructuras Repetitivas 3: Repetir
+13 Estructuras Repetitivas 4: Mientras
+14 Arreglos 1: Definiciones y Acceso
+15 Arreglos 2: Lectura y Mostrado
+
+Arduino1:
+1. Algoritmos
+2. Algoritmos Usando Bloques
+3. Conociendo Arduino
+-----
+4. Iniciando la Programación en Arduino (Hablar de Lenguaje C++), Variables en Arduino. Tipos de Variables
+5. Funciones por defecto en arduino y Puerto Serial. Funciones setup y loop. Como mostrar resultados sencillos en el puerto Serial (Configuracion).
+int cont=0;
+
+void setup(){
+  //iniciamos el puerto serie
+  Serial.begin(9600);
+}
+
+void loop(){
+  //Imprimimos el valor del contador
+  Serial.print("Contador: ");
+  Serial.println(cont);
+  
+  //incrementamos el contador y esperamos un segundo
+  cont++;
+  delay(1000);
+}
+6. Expresiones Matemáticas y Operadores Aritmeticos. Operadores Aritmeticos en Arduino y como usarlos con expresiones matematicas.
+7. Ambito de las variables en Arduino.
+-----
+8. Entradas por el Puerto Serial
+9. Resolucion de Problemas y algoritmos
+10. Del enunciado al algoritmo secuencial
+11. Funciones definidas por el usuario
+-----
+12. 
+13. Calculos comunes 1: promedios y porcentajes
+14. Calculos comunes 2: aumentos y descuentos
+15. Linealización de Expresiones Matemáticas
+
+Funciones por defecto en arduino.
+
+millis() – http://arduino.cc/en/Reference/Millis
+micros() – http://arduino.cc/en/Reference/Micros
+delay() – http://arduino.cc/en/Reference/Delay
+delayMicroseconds() – http://arduino.cc/en/Reference/DelayMicroseconds
+min() – http://arduino.cc/en/Reference/Min
+max() – http://arduino.cc/en/Reference/Max
+abs() – http://arduino.cc/en/Reference/Abs
+constrain() – http://arduino.cc/en/Reference/Constrain
+pow() – http://arduino.cc/en/Reference/Pow
+sqrt() – http://arduino.cc/en/Reference/Sqrt
+sin() – http://arduino.cc/en/Reference/Sin
+cos() – http://arduino.cc/en/Reference/Cos
+tan() – http://arduino.cc/en/Reference/Tan
+random() – http://arduino.cc/en/Reference/Random
+randomSeed() – http://arduino.cc/en/Reference/RandomSeed
+
+ARDUINO1:
++1 Conociendo Arduino
++2 Iniciando la Programación en Arduino
++3 Salidas. Parte 1
+4 Salidas. Parte 2
+5 Salidas. Parte 3
++6 Variables
++7 Operadores Aritméticos
+8 Condiciones. Parte 1
++9 Entradas Por el Puerto Serial
+10 Entradas Digitales
+11 Entradas Analógicas
+12 Condiciones. Parte 2
+13 Ciclos. Parte 1
+14 Ciclos. Parte 2
+15 Operaciones Con String
+
+ARDUINO2:
+1 Funciones. Parte 1
+2 Funciones. Parte 2
+3 Funciones. Parte 3
+4 Lcd. Parte 1
+5 Librerías
+6 Lcd. Parte 2
+7 Arreglos. Parte 1
+8 Memoria EEPROM
+9 Relés
+10 Interrupciones
+11 Arreglos. Parte 2
+12 Teclados Matriciales
+13 Sensores. Parte 1
+14 Sensores. Parte 2
+15 Simulador Desktop
+
+ARDUINO3:
